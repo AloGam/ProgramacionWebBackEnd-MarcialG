@@ -1,0 +1,17 @@
+{
+  "name": "expressmiddleware",
+  "version": "1.0.0",
+  "description": "Implementa el middleware en un formulario",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MAGH",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "bootstrap": "^5.3.3",
+    "express": "^4.21.2"
+  }
+}
