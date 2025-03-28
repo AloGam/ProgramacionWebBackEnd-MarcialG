@@ -1,0 +1,16 @@
+{
+  "name": "desafioapi",
+  "version": "1.0.0",
+  "description": "Desafio: Desarrollar una app para que los alumnos exploren de manera interactiva sus materas",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MAGH",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^4.21.2"
+  }
+}
