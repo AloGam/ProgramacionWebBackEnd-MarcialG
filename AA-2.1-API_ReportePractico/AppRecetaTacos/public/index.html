@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TacosMx</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <h1>🌮 TacosChidos 🌮</h1>
+  <form id="Form" class="buttons">
+    <button type="button" data-type="Puerco">🐷</button>
+    <button type="button" data-type="Pollo">🐔</button>
+    <button type="button" data-type="Res">🐮</button>
+    <button type="button" data-type="Camaron">🦐</button>
+  </form>
+  <div id="Container"></div>
+  <script>
+    document.getElementById('Form').addEventListener('click', async (e) => {
+      if (e.target.tagName === 'BUTTON') {
+        const type = e.target.getAttribute('data-type');
+        const response = await fetch(`/receta/${type}`);
+        const data = await response.json();
+        const container = document.getElementById('Container');
+        if (data.error) {
+          container.innerHTML = `<p>${data.error}</p>`;
+        } else {
+          const acompañamientos = data.acompañamientos.map(a => 
+            `<li>${a.nombre} (${a.cantidad})</li>`
+          ).join('');
+          container.innerHTML = `
+            <h2>${data.nombre}</h2>
+            <p>Proteína: ${data.proteina}</p>
+            <p>Preparación: ${data.preparacion}</p>
+            <p>Salsa: ${data.salsa}</p>
+            <p>Acompañamientos:</p>
+            <p>${acompañamientos}</p>
+            <p>Precio: $${data.precio}</p>
+          `;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

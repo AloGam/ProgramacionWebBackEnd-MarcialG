@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background-color: white;
+  color: darkorange;
+  padding: 20px;
+  font-size: 100px;
+}
+
+.buttons {
+  margin: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  box-shadow: black 2px 3px 2px 2px;
+  cursor: pointer;
+  font-size: 100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: #21867a;
+}
+
+#Container {
+  margin-top: 20px;
+}
