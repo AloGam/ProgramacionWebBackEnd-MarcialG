@@ -31,7 +31,7 @@ app.listen(puerto, () => {
   console.log(`Servidor corriendo en http://localhost:${puerto}`);
 });
 
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri)
   .then(() => {
     console.log('Conexión exitosa a la base de datos');
   })
