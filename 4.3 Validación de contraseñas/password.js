@@ -22,3 +22,8 @@ function validacionPassword(password) {
 }
 
 module.exports = validacionPassword;
+
+const passwords = ["Marcial2020!", "marcial2020!", "Marcial!", "Marcial2020", "MARCIAL2020!", "Paco2020!"];
+passwords.forEach(contra => {
+    console.log(`Password: "${contra}" => ${validacionPassword(contra)}`);
+});
